@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Testing...'
                 sh 'cd configure-pods/'
-                minikube start
+                sh 'minikube start'
             }
         }
         stage('Deploy') {
