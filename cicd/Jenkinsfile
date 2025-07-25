@@ -20,7 +20,7 @@ pipeline {
         stage('Print Message') {
             steps {
                 script {
-                    def message = "Hello, this is a custom message from your Jenkins pipeline!"
+                    def message = "Howdy :), this is a custom message from your Jenkins pipeline!"
                     echo message
                 }
             }
