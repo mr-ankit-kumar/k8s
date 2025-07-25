@@ -1,6 +1,12 @@
 pipeline {
     agent any
-    
+    parameters {
+		string(name: 'BASTION_SERVER_IP', defaultValue: '', description: 'Bastion server IP to deploy')
+    }
+
+	environment {
+		BASTION_SERVER_IP = ""
+    }
     stages {
         stage('Build') {
             steps {
@@ -20,8 +26,8 @@ pipeline {
         stage('Print Message') {
             steps {
                 script {
-                    def message = "Howdy :), this is a custom message from your Jenkins pipeline!"
-                    echo message
+                    def BASTION_SERVER_IP = params.BASTION_SERVER_IP
+                    echo BASTION_SERVER_IP
                 }
             }
         }
