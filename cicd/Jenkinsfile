@@ -12,9 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scm
-            }
-        }
-    stages {
+            }	    
         stage('Build') {
             steps {
                 echo 'Building...'
