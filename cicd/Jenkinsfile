@@ -32,7 +32,7 @@ pipeline {
 			dir(PATH_F){
 	                    def BASTION_SERVER_IP = params.BASTION_SERVER_IP
 	                    echo BASTION_SERVER_IP
-			    ls -lrth
+			    sh 'ls -lrth'
 			    sh 'cat abc.txt'
                 	}
 		}
