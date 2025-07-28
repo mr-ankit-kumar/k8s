@@ -26,14 +26,14 @@ pipeline {
         }
         stage('Print Message') {
             steps {
-		    dir{path}{
                 script {
-                    def BASTION_SERVER_IP = params.BASTION_SERVER_IP
-                    echo BASTION_SERVER_IP
-			cat abc.txt
-                }
-		    }
-            }
-            }
-        }
+			dir{path}{
+	                    def BASTION_SERVER_IP = params.BASTION_SERVER_IP
+	                    echo BASTION_SERVER_IP
+			    cat abc.txt
+                	}
+		}
+	    }
+	}
     }
+}
