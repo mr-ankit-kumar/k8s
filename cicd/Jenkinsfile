@@ -6,6 +6,7 @@ pipeline {
 
 	environment {
 		BASTION_SERVER_IP = ""
+		path = "cicd/demo"
     }
     stages {
         stage('Build') {
@@ -29,6 +30,12 @@ pipeline {
                     def BASTION_SERVER_IP = params.BASTION_SERVER_IP
                     echo BASTION_SERVER_IP
                 }
+            }
+	   dir {path}
+		steps {
+                 	script {
+                    		cat abc.txt
+                	}
             }
         }
     }
