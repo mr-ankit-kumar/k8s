@@ -6,7 +6,7 @@ pipeline {
 
 	environment {
 		BASTION_SERVER_IP = ""
-		PATH_F = "/var/jenkins_home/workspace/demo"
+		PATH_F = "/var/jenkins_home/workspace/demo/k8s/cicd/demo"
     }
     stages {
         stage('Build') {
