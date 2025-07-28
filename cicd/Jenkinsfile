@@ -29,7 +29,7 @@ pipeline {
         stage('Print Message') {
             steps {
                 script {
-			dir{PATH_F}{
+			dir{env.PATH_F}{
 	                    def BASTION_SERVER_IP = params.BASTION_SERVER_IP
 	                    echo BASTION_SERVER_IP
 			    cat abc.txt
