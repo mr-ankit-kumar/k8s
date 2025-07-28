@@ -6,7 +6,7 @@ pipeline {
 
 	environment {
 		BASTION_SERVER_IP = ""
-		PATH_F = "/var/jenkins_home/workspace/demo/k8s/configure-pods/"
+		PATH_F = "k8s/configure-pods"
     }
     stages {
         stage('Build') {
