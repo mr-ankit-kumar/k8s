@@ -6,7 +6,7 @@ pipeline {
 
 	environment {
 		BASTION_SERVER_IP = ""
-		PATH_F = "/var/jenkins_home/workspace/demo/k8s/cicd/demo"
+		PATH_F = "/var/jenkins_home/workspace/demo/k8s/configure-pods"
     }
     stages {
         stage('Build') {
@@ -30,10 +30,9 @@ pipeline {
             steps {
                 script {
 			dir(PATH_F){
-			    sh 'ls -lrth'
+			    cat pod.yml
 	                    def BASTION_SERVER_IP = params.BASTION_SERVER_IP
 	                    echo BASTION_SERVER_IP
-			    sh 'cat abc.txt'
                 	}
 		}
 	    }
