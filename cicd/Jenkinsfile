@@ -31,8 +31,8 @@ pipeline {
                     echo BASTION_SERVER_IP
                 }
             }
-	   dir {path}
 		steps {
+			dir {path}
                  	script {
                     		cat abc.txt
                 	}
