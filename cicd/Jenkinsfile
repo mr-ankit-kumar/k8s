@@ -23,6 +23,7 @@ pipeline {
             steps {
                 echo 'Deploying...'
 		sh 'ls -lrth'
+		sh 'pwd'
             }
         }
         stage('Print Message') {
