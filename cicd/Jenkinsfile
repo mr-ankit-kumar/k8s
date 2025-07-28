@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
 			dir(PATH_F){
-			    cat pod.yml
+			    sh 'cat pod.yml'
 	                    def BASTION_SERVER_IP = params.BASTION_SERVER_IP
 	                    echo BASTION_SERVER_IP
                 	}
