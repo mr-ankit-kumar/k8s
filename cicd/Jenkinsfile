@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-		sh ls -lrth
+		sh 'ls -lrth'
             }
         }
         stage('Print Message') {
