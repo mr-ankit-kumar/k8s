@@ -6,7 +6,7 @@ pipeline {
 
 	environment {
 		BASTION_SERVER_IP = ""
-		path = "cicd/demo"
+		path = "demo"
     }
     stages {
         stage('Build') {
