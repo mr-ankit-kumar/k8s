@@ -32,7 +32,7 @@ pipeline {
                 }
             }
 		steps {
-			dir {path}
+			dir {env.path}
                  	script {
                     		cat abc.txt
                 	}
