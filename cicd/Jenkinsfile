@@ -6,7 +6,7 @@ pipeline {
 
 	environment {
 		BASTION_SERVER_IP = ""
-		path = "demo"
+		path_f = "demo"
     }
     stages {
         stage('Build') {
@@ -27,7 +27,7 @@ pipeline {
         stage('Print Message') {
             steps {
                 script {
-			dir{path}{
+			dir{path_f}{
 	                    def BASTION_SERVER_IP = params.BASTION_SERVER_IP
 	                    echo BASTION_SERVER_IP
 			    cat abc.txt
