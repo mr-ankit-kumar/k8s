@@ -9,6 +9,12 @@ pipeline {
 		PATH_F = "k8s/configure-pods"
     }
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+    stages {
         stage('Build') {
             steps {
                 echo 'Building...'
